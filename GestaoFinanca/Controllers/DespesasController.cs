@@ -8,7 +8,24 @@ namespace Fiap.GestaoFinanca.Api.Controllers
     [Route("api/[controller]")]
     public class DespesasController : ControllerBase
     {
-        [HttpPost]
+
+        [HttpGet("exemplo")]
+        public IActionResult ObterExemplo()
+        {
+            var despesa = new Despesa(
+                "Aluguel",
+                1500.00m,
+                DateTime.Now,
+                "Moradia",
+                "Boleto Bancário"
+                );
+            var response = despesa.ToResponse();
+            return Ok(response);
+        }
+
+
+
+            [HttpPost]
         public IActionResult Criar([FromBody] DespesaRequest request)
         {
             var despesa = new Despesa(

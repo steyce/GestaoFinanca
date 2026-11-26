@@ -7,5 +7,8 @@
         DateTime Data,
         string Categoria,
         string FormaPagamento,
-        DateTime CriadoEm);
+        DateTime CriadoEm,
+        string? Observacao = null);
+
+
 }

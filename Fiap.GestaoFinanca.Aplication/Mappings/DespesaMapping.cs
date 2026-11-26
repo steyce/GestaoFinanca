@@ -14,7 +14,8 @@ namespace Fiap.GestaoFinanca.Application.Mappings
                 despesa.Data,
                 despesa.Categoria,
                 despesa.FormaPagamento,
-                despesa.CriadoEm
+                despesa.CriadoEm,
+                Observacao: null
                 );
              
         }
